@@ -18,6 +18,10 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'script': ['Dancing Script', 'cursive'],
+				'serif': ['Cormorant', 'serif'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -61,6 +65,14 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				vintage: {
+					cream: '#F2E8D5',
+					brown: '#8B4513',
+					gold: '#D4A574',
+					beige: '#E8D4B8',
+					red: '#C44536',
+					green: '#4A7856',
 				}
 			},
 			borderRadius: {
@@ -84,11 +96,23 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'snowfall': {
+					'0%': { transform: 'translateY(-10px)', opacity: '0' },
+					'10%': { opacity: '1' },
+					'90%': { opacity: '1' },
+					'100%': { transform: 'translateY(100vh)', opacity: '0' }
+				},
+				'float': {
+					'0%, 100%': { transform: 'translateY(0px)' },
+					'50%': { transform: 'translateY(-10px)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'snowfall': 'snowfall 10s linear infinite',
+				'float': 'float 3s ease-in-out infinite'
 			}
 		}
 	},
